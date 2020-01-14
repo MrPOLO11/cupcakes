@@ -4,6 +4,9 @@
  * Date: 1/13/20
  * http://marcosrivera.greenriverdev.com/328/cupcakes/index.php
  *
+ * The following program utilizes the associative array to display available options for cupcake flavors,
+ * A name for the order, as well as the grand total when a correct order has been made!
+ *
  */
 
 ini_set('display_errors', 1);
@@ -24,11 +27,10 @@ error_reporting(E_ALL);
         <legend>Your name: </legend>
         <input type="text" name="name">
     </div>
-
     <div>
         <legend>Cupcake Flavors: </legend>
     </div>
-
+    <!-- The following block constructs available cupcake flavors-->
     <?php
         $flavors = ["grasshopper" => "The Grasshopper",
                     "maple" => "Whiskey Maple Bacon",
@@ -44,11 +46,9 @@ error_reporting(E_ALL);
                   </div>";
         }
     ?>
-
     <button id="submit" type="submit">
         Order Up
     </button>
 </form>
-
 </body>
 </html>
