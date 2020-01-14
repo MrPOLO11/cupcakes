@@ -18,11 +18,11 @@ error_reporting(E_ALL);
     <title>Cupcakes Assignment</title>
 </head>
 <body>
-<form action=* method="post">
+<form action="confirmation.php" method="post">
     <h1><strong>Cupcake Fundraiser</strong></h1>
     <div>
         <legend>Your name: </legend>
-        <input type="text">
+        <input type="text" name="name">
     </div>
 
     <div>
@@ -30,13 +30,13 @@ error_reporting(E_ALL);
     </div>
 
     <?php
-        $flavors = ["The Grasshopper" => "grasshopper",
-                    "Whiskey Maple Bacon" => "maple",
-                    "Carrot Walnut" => "carrot",
-                    "Salted Caramel Cupcake" => "caramel",
-                    "Red Velvet" => "velvet",
-                    "Lemon Drop" => "lemon",
-                    "Tiramisu" => "tiramisu"];
+        $flavors = ["grasshopper" => "The Grasshopper",
+                    "maple" => "Whiskey Maple Bacon",
+                    "carrot" => "Carrot Walnut",
+                    "caramel" => "Salted Caramel Cupcake",
+                    "velvet" => "Red Velvet",
+                    "lemon" => "Lemon Drop",
+                    "tiramisu" => "Tiramisu"];
         foreach ($flavors as $key => $value) {
             echo "<div>
                   <input type='checkbox' value='$value' id='$key' name='flavors[]'>
@@ -49,5 +49,6 @@ error_reporting(E_ALL);
         Order Up
     </button>
 </form>
+
 </body>
 </html>
