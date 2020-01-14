@@ -1,4 +1,13 @@
 <?php
+/**
+ * Marcos Rivera
+ * Date: 1/13/20
+ * http://marcosrivera.greenriverdev.com/328/cupcakes/index.php
+ *
+ */
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 ?>
 <!doctype html>
 <html lang="en">
@@ -9,6 +18,7 @@
     <title>Cupcakes Assignment</title>
 </head>
 <body>
+<form action=* method="post">
     <h1><strong>Cupcake Fundraiser</strong></h1>
     <div>
         <legend>Your name: </legend>
@@ -17,42 +27,27 @@
 
     <div>
         <legend>Cupcake Flavors: </legend>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">The Grasshopper</label>
     </div>
 
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Chunky Monkey</label>
-    </div>
-
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Whiskey Maple Bacon</label>
-    </div>
-
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Carrot Walnut</label>
-    </div>
-
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Banana-palooza</label>
-    </div>
-
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Red Velvet</label>
-    </div>
-
-    <div>
-        <input type="checkbox" value="" id="" name="flavors[]">
-        <label for="">Lemon Drop</label>
-    </div>
+    <?php
+        $flavors = ["The Grasshopper" => "grasshopper",
+                    "Whiskey Maple Bacon" => "maple",
+                    "Carrot Walnut" => "carrot",
+                    "Salted Caramel Cupcake" => "caramel",
+                    "Red Velvet" => "velvet",
+                    "Lemon Drop" => "lemon",
+                    "Tiramisu" => "tiramisu"];
+        foreach ($flavors as $key => $value) {
+            echo "<div>
+                  <input type='checkbox' value='$value' id='$key' name='flavors[]'>
+                  <label for='$key'>$key</label>
+                  </div>";
+        }
+    ?>
 
     <button id="submit" type="submit">
         Order Up
     </button>
+</form>
 </body>
 </html>
