@@ -23,6 +23,7 @@ error_reporting(E_ALL);
 <body>
 <form action="confirmation.php" method="post">
     <h1><strong>Cupcake Fundraiser</strong></h1>
+    <p>Here is some text that will break</p>
     <div>
         <legend>Your name: </legend>
         <input type="text" name="name">
